@@ -15,7 +15,7 @@ class ProjectsController < ProtectedController
 
   # POST /projects
   def create
-    @project = Project.new(project_params)
+    @project = current_user.projects.build(project_params)
 
     if @project.save
       render json: @project, status: :created, location: @project
@@ -41,11 +41,10 @@ class ProjectsController < ProtectedController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_project
-      @project = Project.find(params[:id])
+      @project = current_user.projects.find(params[:id])
     end
-
     # Only allow a trusted parameter "white list" through.
     def project_params
-      params.require(:project).permit(:name, :description, :due_date)
+      params.require(:project).permit(:name, :description, :due_date, :start_date, :project_length)
     end
 end
