@@ -3,7 +3,7 @@ class ProjectsController < ProtectedController
 
   # GET /projects
   def index
-    @projects = Project.all
+    @projects = current_user.projects.all
 
     render json: @projects
   end
