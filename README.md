@@ -7,7 +7,9 @@ In future iterations, The tasks that make up a project will also have individual
 This is the backend for MyProjectManager.
 
 Deployed backend: https://agile-plains-89962.herokuapp.com/
+
 Deployed frontend: https://rasyadiabdoellah.github.io/ember-project-manager/
+
 Frontend repo: https://github.com/RasyadiAbdoellah/ember-project-manager
 
 ## Tech Stack
