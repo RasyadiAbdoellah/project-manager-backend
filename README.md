@@ -12,10 +12,35 @@ Deployed frontend: https://rasyadiabdoellah.github.io/ember-project-manager/
 
 Frontend repo: https://github.com/RasyadiAbdoellah/ember-project-manager
 
+## Available routes
+
+- Auth rooutes: 
+  - post '/sign-up'
+  - post '/sign-in'
+  - delete '/sign-out'
+  - patch '/change-password' 
+  
+- Project routes:
+  - get '/projects' -finds all projects belonging to currently signed in user
+  - post '/projects' -creates new project
+  - get '/projects/:id' -gets a single project resource based on id. user must own project to view
+  - patch/put '/projects/:id' -updates a project
+  - delete '/projects/:id' -deletes project
+  
 ## Tech Stack
 - HTML5, CSS3, JavaScript ES6
 - Ember frontend
 - Ruby on Rails backend
+
+## Action Plan
+
+- **Day 1:** Deploy boilerplate Backend & Frontend, build single resource API to V1, curl test CRUD functions, then deploy V1 API
+  
+- **Day 2:** Define front-end routing, build projects list view, single project functionality + view, new project functionality + view, and delete project function
+ 
+- **Day 3:** Work on date information display + manipulation, improve UX/UI flow, start styling
+  
+- **Day 4:** Bug fix, docs
 
 ## User Stories
 ### V1
